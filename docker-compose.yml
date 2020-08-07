@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - 8081:8080
+      - 50000:50000
+    volumes:
+      - ~/jenkins_data:/var/jenkins_home
+
+
+
+#Docker-compose commands:
+#
+#docker-compose up -d
+#docker ps
+#docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+#
+#docker rm -v CONTENEDOR
+#
+#
+#
